@@ -22,7 +22,7 @@ class User extends Controller{
 			$validate = new Validate($source);
 			//Nhảy đến phương thức addRule class Models
 
-			$validate->addRule('username', 'existRecord');
+			$validate->addRule('username', 'existRecord|required');
 			$validate->addRule('password', 'required');
 
 			//Phương thức run() class Validate
